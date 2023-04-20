@@ -32,11 +32,11 @@ const Canvas: React.FC = () => {
     ctx.stroke();
   };
 
-  const handleMouseDown = (event: React.MouseEvent<HTMLCanvasElement>) => {
+  const handleMouseDown = (event: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
     const ctx = ctxRef.current;
     if (!ctx) return;
 
-    const { clientX, clientY } = event;
+    const { clientX, clientY } = ('touches' in event) ? event.touches[0] : event;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -47,11 +47,11 @@ const Canvas: React.FC = () => {
     setCurrentLine([{ x: offsetX, y: offsetY }]);
   };
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLCanvasElement>) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
     const ctx = ctxRef.current;
     if (!ctx || currentLine.length === 0) return;
 
-    const { clientX, clientY } = event;
+    const { clientX, clientY } =  ('touches' in event) ? event.touches[0] : event;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -98,12 +98,15 @@ const Canvas: React.FC = () => {
   return (
     <div>
       <canvas
-        ref={canvasRef}
-        width={400}
-        height={400}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
+          ref={canvasRef}
+          width={600}
+          height={400}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onTouchStart={handleMouseDown}
+          onTouchMove={handleMouseMove}
+          onTouchEnd={handleMouseUp}
         style={{ border: '1px solid black' }}
       />
       <div>
