@@ -99,7 +99,7 @@ const Canvas: React.FC = () => {
     <div>
       <canvas
           ref={canvasRef}
-          width={600}
+          width={500}
           height={400}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
