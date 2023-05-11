@@ -50,7 +50,9 @@ const Blackboard: React.FC = () => {
     setCurrentLine([{ x: offsetX, y: offsetY }]);
   };
 
+  
   const handleMouseMove = (event: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
+    event.preventDefault();
     const ctx = ctxRef.current;
     if (!ctx || currentLine.length === 0) return;
 
