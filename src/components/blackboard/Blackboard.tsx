@@ -105,7 +105,7 @@ const Blackboard: React.FC = () => {
       <canvas
           className='drawing-box'
           ref={canvasRef}
-          width={400}
+          width={600}
           height={300}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}

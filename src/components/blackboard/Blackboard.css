@@ -1,7 +1,7 @@
 /* Estilos CSS para o canvas */
 .drawing-box {
-  background-color: #0a1f09; /* verde escuro */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 2); /* sombra */
+  background-color: #0a1f09; 
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .buttons-box{
   margin-top: 2vh;
