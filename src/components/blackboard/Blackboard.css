@@ -1,0 +1,51 @@
+/* Estilos CSS para o canvas */
+.drawing-box {
+  background-color: #0a1f09; /* verde escuro */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 2); /* sombra */
+}
+.buttons-box{
+  margin-top: 2vh;
+}
+.undo-button{
+  font-size:15px;
+  font-family:Arial;
+  width:80px;
+  height:30px;
+  border-width:1px;
+  color:#666666;
+  border-color:#dcdcdc;
+  font-weight:bold;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  text-shadow:inset 0px 1px 0px #ffffff;
+  background:linear-gradient(#ffffff, #f6f6f6);
+}
+.undo-button:hover {
+  background: linear-gradient(#f6f6f6, #ffffff);
+}
+  
+
+.delete-all-button {
+  font-size:15px;
+  font-family:Arial;
+  width:80px;
+  height:30px;
+  border-width:1px;
+  color:#666666;
+  border-color:#dcdcdc;
+  font-weight:bold;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  text-shadow:inset 0px 1px 0px #ffffff;
+  background:linear-gradient(#ffffff, #f6f6f6);
+  margin-left: 1vw;
+}
+.delete-all-button:hover {
+  background: linear-gradient(#f6f6f6, #ffffff);
+}
